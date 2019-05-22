@@ -1,0 +1,64 @@
+/*
+ * File: index.scss
+ * Project: ncrm
+ * File Created: Mo, 2019-05-06  07:58:22 pm
+ * Author: wangxiaokang (wangxiaokang003@ke.com)
+ * -----
+ * Last Modified: Th, 2019-05-09 11:26:49 am
+ * Modified By: wangxiaokang (wangxiaokang003@ke.com>)
+ * -----
+ */
+
+.filterList-container {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  .filteList-keyword {
+    input {
+      border:none;
+      border-bottom: 1px solid #d9d9d9;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .ant-input-suffix{
+      color: #ccc;
+    }
+  }
+  .ant-list-item:first-child {
+    padding-top: 0;
+  }
+  .ant-list-item {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .filterList-info {
+    padding: 8px 16px;
+    color: #aaa;
+    font-size: 12px;
+  }
+  .filteList-checked {
+    .filterList-action {
+      color: #ccc;
+      float: right;
+      transition: all 0.3s;
+      &:hover{
+        color: #999;
+      }
+    }
+  }
+  .filteList-sugList {
+    .filterList-action {
+      float: right;
+      color: #ddd;
+      &.checked {
+        color: #33B28C;
+      }
+    }
+    .ant-checkbox-inner{
+      border-radius: 50%;
+    }
+  }
+  .filterList-title {
+    flex-grow: 1;
+    font-size: 12px;
+  }
+}
