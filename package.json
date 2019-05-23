@@ -1,23 +1,58 @@
 {
   "name": "antd-filterlist",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "基于antd的多选组件，支持万级数据项的过滤，为性能而生",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --config build/dev.conf.js",
+    "build": "webpack --config build/prod.conf.js"
   },
   "keywords": [
     "antd",
     "react",
     "select",
-    "transformer"
+    "transfer"
   ],
-  "author": "nickzone",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": "nickzone<https://github.com/nickzone>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickzone/filterList"
+  },
+  "homepage": "https://github.com/nickzone/filterList",
+  "bugs": {
+    "url": "https://github.com/nickzone/filterList/issues"
+  },
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.11.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.1",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
     "antd": "^3.18.2",
+    "babel-runtime": "^6.26.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-infinite-scroller": "^1.2.4"
   }
 }

@@ -8,7 +8,7 @@
 
 ## 安装
 
-npm install antd-filterlist 
+npm install antd-filterlist
 
 ```js
 import FilterList from "antd-filterlist";
