@@ -6,8 +6,7 @@ module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    // library: 'default',
-    // libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs2',
     path: path.resolve(__dirname, '../dist'),
     filename: 'ant-filterlist.js'
   },
@@ -18,7 +17,7 @@ module.exports = {
         use: [{
           loader: "babel-loader"
         }],
-        exclude: "/node_modules/"
+        exclude: /node_modules/
       },
       {
         test: /\.less$/,
@@ -34,5 +33,5 @@ module.exports = {
         }]
       }
     ]
-  }
+  },
 }

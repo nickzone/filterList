@@ -2,7 +2,7 @@
   "name": "antd-filterlist",
   "version": "0.0.6",
   "description": "基于antd的多选组件，支持万级数据项的过滤，为性能而生",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/dev.conf.js",
     "build": "webpack --config build/prod.conf.js"
@@ -47,9 +47,11 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/runtime": "^7.4.5",
     "antd": "^3.18.2",
     "babel-runtime": "^6.26.0",
+    "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
