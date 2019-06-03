@@ -6,6 +6,8 @@
 
 内部通过分页和搜索防抖实现性能优化。
 
+如果使用中有任何问题，欢迎提issue。
+
 ## 安装
 
 ```bash
@@ -16,7 +18,7 @@ npm install antd-filterlist
 
 ```js
 import FilterList from "antd-filterlist";
-const list = [{key:'000',value:'张3'},{key:'001',value:'李4'},...]; // 实测10000条
+const list = [{key:'000',value:'张3'},{key:'001',value:'李4'},...]; // 实测10000条以下不卡顿
 const comp = 
   <FilterList
     dataSource={list}
