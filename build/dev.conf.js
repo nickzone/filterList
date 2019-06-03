@@ -1,13 +1,12 @@
 var path = require('path');
-var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/entry.js',
+  entry: './example/index.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'ant-filterlist.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -19,7 +18,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.less$/,
+        test: /\.(le|c)ss$/,
         use: [{
           loader: "style-loader"
         }, {
@@ -38,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: ('./src/index.html')
+      template: ('./example/index.html')
     })
   ]
 }

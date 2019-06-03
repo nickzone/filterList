@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Input, Icon, List, Checkbox } from 'antd'
 import InfiniteScroll from 'react-infinite-scroller';
-import './index.less';
 
 export default class FilterList extends Component {
   constructor(props) {

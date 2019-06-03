@@ -8,7 +8,11 @@
 
 ## 安装
 
+```bash
 npm install antd-filterlist
+```
+
+## 使用
 
 ```js
 import FilterList from "antd-filterlist";

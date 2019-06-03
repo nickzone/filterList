@@ -2,10 +2,11 @@
   "name": "antd-filterlist",
   "version": "0.0.6",
   "description": "基于antd的多选组件，支持万级数据项的过滤，为性能而生",
-  "main": "./lib/index.js",
+  "main": "./index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/dev.conf.js",
-    "build": "webpack --config build/prod.conf.js"
+    "build": "npx lessc ./src/index.less lib/index.css & npx babel src/index.js -d lib",
+    "test": "webpack --config build/prod.conf.js"
   },
   "keywords": [
     "antd",
@@ -14,8 +15,9 @@
     "transfer"
   ],
   "files": [
-    "dist",
-    "src"
+    "lib",
+    "src",
+    "index.js"
   ],
   "author": "nickzone<https://github.com/nickzone>",
   "repository": {
@@ -40,6 +42,7 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.7.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2",

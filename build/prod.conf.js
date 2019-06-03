@@ -1,15 +1,23 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './example/index.js',
   output: {
-    libraryTarget: 'commonjs2',
     path: path.resolve(__dirname, '../dist'),
-    filename: 'ant-filterlist.js'
+    filename: '[name].js'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: ('./example/index.html')
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    }),
+  ],
   module: {
     rules: [
       {
@@ -20,9 +28,12 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.less$/,
+        test: /\.(le|c)ss$/,
         use: [{
-          loader: "style-loader"
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '../dist'
+          },
         }, {
           loader: "css-loader"
         }, {
@@ -34,4 +45,5 @@ module.exports = {
       }
     ]
   },
+  // externals: [nodeExternals()],
 }
