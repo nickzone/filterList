@@ -37,6 +37,10 @@ const comp =
     onChange={(keys)=>{console.log(keys)}}/>
 ```
 
+## 在线示例
+
+[codesandbox](https://codesandbox.io/s/antdfilterlistexample-euvvb)
+
 ## API
 
 | 属性         |          说明      |   类型  |  默认值 |
