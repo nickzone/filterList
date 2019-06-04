@@ -18,10 +18,22 @@ npm install antd-filterlist
 
 ```js
 import FilterList from "antd-filterlist";
-const list = [{key:'000',value:'张3'},{key:'001',value:'李4'},...]; // 实测10000条以下不卡顿
+
+// 该组件依赖 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 按需加载antd组件样式,如果样式有问题,请先排除此问题,或导入样式
+// import 'antd/dist/antd.css';
+
+const dataSource = Array(1000)
+  .fill()
+  .map((v, i) => {
+    return {
+      key: "key" + i,
+      value: "value" + i
+    };
+  }); // 实测10000条以下不卡顿
+
 const comp = 
   <FilterList
-    dataSource={list}
+    dataSource={dataSource}
     onChange={(keys)=>{console.log(keys)}}/>
 ```
 

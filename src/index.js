@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Input from 'antd/lib/input'
-import Icon from 'antd/lib/icon'
-import List from 'antd/lib/list'
-import Checkbox from 'antd/lib/checkbox'
+import { Input } from 'antd'
+import { Icon } from 'antd'
+import { List } from 'antd'
+import { Checkbox } from 'antd'
 import InfiniteScroll from 'react-infinite-scroller';
-import 'antd/lib/Input/style'
-import 'antd/lib/Icon/style'
-import 'antd/lib/List/style'
-import 'antd/lib/Checkbox/style'
 
 export default class FilterList extends Component {
   constructor(props) {
