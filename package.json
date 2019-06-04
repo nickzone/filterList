@@ -1,6 +1,6 @@
 {
   "name": "antd-filterlist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "基于antd的多选组件，支持万级数据项的过滤，为性能而生",
   "main": "./index.js",
   "scripts": {
